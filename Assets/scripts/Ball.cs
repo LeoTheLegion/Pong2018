@@ -19,5 +19,5 @@ public class Ball : MonoBehaviour {
 	void Update () {
 		
 	}
-		
+
 }
