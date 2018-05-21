@@ -14,4 +14,11 @@ public class Player : MonoBehaviour {
 		var mouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		transform.position = new Vector2(transform.position.x, mouse.y);
 	}
+
+	void OnCollisionEnter2D (Collision2D col){	
+		if (col.gameObject.GetComponent<Ball> () != null) {
+			print ("speeding up");
+			col.rigidbody.velocity *= 1.1f;
+		}
+	}
 }
